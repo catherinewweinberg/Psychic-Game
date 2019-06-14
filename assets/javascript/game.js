@@ -2,7 +2,7 @@
 
 
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"];
-var guessesNum = 10;
+var guessesNum = 9;
 var guessChoice = [];
 var wins = 0;
 var losses = 0;
@@ -12,8 +12,7 @@ document.onkeyup = function(event) {
     guessChoice.push(userGuess);
 
     var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
-    console.log(computerChoice)
-
+        console.log(computerChoice);
 
 
     if (userGuess === computerChoice) {
@@ -23,7 +22,7 @@ document.onkeyup = function(event) {
     }else{
         guessesNum--;
     }
-    if (guessChoice === 0){
+    if (guessChoice !== computerChoice) { 
         losses++;
     }
     
@@ -40,6 +39,6 @@ document.onkeyup = function(event) {
     document.getElementById("losses").innerHTML = "Losses: " + losses;
     document.getElementById("guessesNum").innerHTML = "Guesses Left: " + guessesNum; 
     document.getElementById("guessChoice").innerHTML = "Your guesses so far: " + guessChoice;
-
+    document.getElementById("guessNum = 0").reset();
 
     }
