@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+  font-family: "Merriweather", serif;
+}
+body {
+  background-color: lightseagreen;
+}
+
+.container {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+}
